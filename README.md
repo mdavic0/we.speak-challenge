@@ -28,6 +28,8 @@ Aplicación web sencilla utilizando Next.js que implementa un contador cuyos val
 
 # Ejecución
 
+## Local
+
 1) Clonar el repositorio
 ```bash
     git clone git@github.com:mdavic0/we.speak-challenge.git
@@ -36,18 +38,19 @@ Aplicación web sencilla utilizando Next.js que implementa un contador cuyos val
 2) Instalar dependencias
 En la raiz del proyecto ejecutar
 ```bash
-npm install
+pnpm install
 ```
 
 3) Ejecutar el servidor de desarrollo
 ```bash
-npm run dev
-# or
-yarn dev
-# or
 pnpm dev
-# or
-bun dev
 ```
 
 4) Luego abrir [http://localhost:3000](http://localhost:3000).
+
+## Despliegue en Vercel
+
+Además de ejecutar la aplicación en localhost, también está desplegada en Vercel y puede ser accesible en línea. La URL de la aplicación desplegada en Vercel es la siguiente:
+
+- [https://we-speak-challenge.vercel.app/](https://we-speak-challenge.vercel.app)
+
