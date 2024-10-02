@@ -1,0 +1,53 @@
+"use client";
+import WeSpeakLogo from "../ui/we-speak-logo";
+import { useState } from 'react';
+
+export default function CounterPage() {
+    const [count, setCount] = useState(0);
+
+    return (
+        <main className="flex min-h-screen flex-col bg-white">
+            <div className="flex shrink-0 pl-40 rounded-lg bg-white h-[61px]">
+                <WeSpeakLogo />
+            </div>
+            <div className="flex grow flex-col md:flex-row bg-customBackground">
+                <div className="flex flex-col justify-center gap-6 rounded-lg md:w-2/5 md:pl-40">
+                <p className={`text-xl text-gray-800 md:text-5xl md:leading-normal`}>
+                    <strong>WeCount.</strong> Contador simple con persistencia en {' '}
+                    <a href="https://vercel.com/docs/storage/vercel-postgres" className="text-customPurple">
+                    Vercel Postgres
+                    </a>
+                </p>
+                </div>
+                <div className="flex items-center justify-center md:w-3/5 md:pr-40">
+                    <div className="flex flex-col items-center justify-center flex-grow mt-10">
+                        <div className="w-full max-w-md rounded-lg bg-white p-10 text-center shadow-lg">
+                            <div className="text-4xl font-bold mb-6 text-gray-800">
+                                {count}
+                            </div>
+
+                            <div className="flex justify-center space-x-4">
+                                <button
+                                    className="px-6 py-3 bg-customPurple hover:bg-purple-300 text-white rounded-lg transition-all focus:outline-none"
+                                    onClick={() => setCount(count + 1)}
+                                >
+                                    <p className="text-xl">
+                                        <strong>+</strong>
+                                    </p>
+                                </button>
+                                <button
+                                    className="px-6 py-3 bg-customPurple hover:bg-purple-300 text-white rounded-lg transition-all focus:outline-none"
+                                    onClick={() => setCount(count - 1)}
+                                >
+                                    <p className="text-xl">
+                                        <strong>-</strong>
+                                    </p>                                    
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    );
+}
