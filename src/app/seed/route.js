@@ -14,17 +14,11 @@ async function seedCounter() {
     );
   `;
 
-  const insertedRevenue = await Promise.all(
-    counter.map(
-      (c) => client.sql`
-        INSERT INTO counter (name, value)
-        VALUES (${c.name}, ${c.value})
-        ON CONFLICT (name) DO NOTHING;
-      `,
-    ),
-  );
-
-  return insertedRevenue;
+  await client.sql`
+    INSERT INTO counter (name, value)
+    VALUES (${counter.name}, ${counter.value})
+    ON CONFLICT (name) DO NOTHING;
+  `;
 }
 
 export async function GET() {
