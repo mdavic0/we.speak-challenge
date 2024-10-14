@@ -1,7 +1,13 @@
 import Counter from "../ui/counter/counter";
 import WeSpeakLogo from "../ui/we-speak-logo";
+import { fetchCount } from "../lib/data";
 
-export default function CounterPage() {
+export default async function CounterPage() {
+
+    const count = await fetchCount();
+
+    console.log('Counterrrrrrrr:', count);
+
     return (
         <main className="flex min-h-screen flex-col bg-white">
             <div className="flex shrink-0 pl-40 rounded-lg bg-white h-[61px]">
@@ -16,7 +22,7 @@ export default function CounterPage() {
                     </a>
                 </p>
                 </div>
-            <Counter count={6}/>
+            <Counter count={count}/>
             </div>
         </main>
     );

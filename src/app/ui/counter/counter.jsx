@@ -5,7 +5,7 @@ import { CounterSkeleton } from '../skeletons';
 
 export default function Counter({count}) {
 
-  console.log('Counter:', count);
+  // console.log('Counter:', count);
   // const [count, setCount] = useState(null);
   // const [isLoading, setIsLoading] = useState(true);
   // const [error, setError] = useState(null);
