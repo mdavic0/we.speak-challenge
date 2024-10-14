@@ -16,7 +16,7 @@ export default function CounterPage() {
                     </a>
                 </p>
                 </div>
-            <Counter />
+            <Counter count={6}/>
             </div>
         </main>
     );
