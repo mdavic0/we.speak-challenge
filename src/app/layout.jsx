@@ -1,5 +1,6 @@
 import localFont from "next/font/local";
 import "./globals.css";
+import WeSpeakLogo from "./ui/we-speak-logo";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -23,6 +24,9 @@ export default function RootLayout({ children }) {
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
+        <header className="flex shrink-0 pl-40 bg-white h-[61px]">
+          <WeSpeakLogo />
+        </header>
         {children}
       </body>
     </html>
