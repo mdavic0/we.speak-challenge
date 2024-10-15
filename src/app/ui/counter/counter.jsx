@@ -1,6 +1,6 @@
 import { updateCount } from '@/app/lib/actions';
 
-export default async function Counter({count}) {
+export default function Counter({count}) {
     const incrementCount = updateCount.bind(null, {increment: 1});
     const decrementCount = updateCount.bind(null, {increment: -1});
 
